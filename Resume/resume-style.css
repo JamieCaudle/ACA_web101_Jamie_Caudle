@@ -1,25 +1,28 @@
 body {
   display: grid;
   grid-template-columns: 30% 70%;
-  
-  
-  
+  grid-gap: 20px;
+}
+
+.picture-label {
+  grid-row-start: 1;
+  background-color: white;
 }
 
 .contact-info {
   background-color: turquoise;
-  grid-row-start: 1;
+  grid-row-start: 2;
+  padding-left: 110px;
 }
 
 main {
-    grid-row-start:1 ;
-    grid-column-start: 2 ;
+  grid-row-start: 1;
+  grid-column-start: 2;
 }
 
-
-
-
-
+.name {
+  font-size: 60px;
+}
 
 h3,
 h4 {
