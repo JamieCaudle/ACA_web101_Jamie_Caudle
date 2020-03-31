@@ -1,0 +1,37 @@
+body {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  
+  
+  
+}
+
+.contact-info {
+  background-color: turquoise;
+  grid-row-start: 1;
+}
+
+main {
+    grid-row-start:1 ;
+    grid-column-start: 2 ;
+}
+
+
+
+
+
+
+h3,
+h4 {
+  color: grey;
+}
+
+.intro-paragraph,
+h1 {
+  color: purple;
+}
+
+img {
+  height: 120px;
+  width: auto;
+}
