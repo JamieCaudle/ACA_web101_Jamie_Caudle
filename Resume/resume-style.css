@@ -1,27 +1,76 @@
 body {
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-gap: 20px;
+  column-gap: 20px;
 }
 
-.picture-label {
+.row-one-column-one {
   grid-row-start: 1;
   background-color: white;
+  justify-self: center;
 }
-
-.contact-info {
-  background-color: turquoise;
-  grid-row-start: 2;
-  padding-left: 110px;
-}
-
-main {
+.row-one-column-two {
   grid-row-start: 1;
   grid-column-start: 2;
 }
 
+.row-two-column-one {
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+.row-two-column-two {
+    grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+
+
+
+
+
+ .row-three-column-one {
+    grid-row-start: 3;
+    grid-column-start: 1;
+} 
+
+
+ .row-four-column-one {
+    grid-row-start: 4;
+    grid-column-start: 1;
+} 
+
+.row-three-column-two {
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
+
+
+
+
+
+
+
+
+
+.contact-info {
+  background-color: turquoise;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  padding-top: 15px;
+}
+
 .name {
   font-size: 60px;
+  padding-left: 30px;
+  margin-top: 23px;
+  margin-bottom: 0px;
+}
+
+.title {
+  font-size: 30px;
+  padding-left: 30px;
 }
 
 h3,
@@ -32,9 +81,10 @@ h4 {
 .intro-paragraph,
 h1 {
   color: purple;
+  padding-left: 20px;
 }
 
 img {
-  height: 120px;
+  height: 170px;
   width: auto;
 }
