@@ -44,7 +44,7 @@ body {
   grid-row-start: 4;
   grid-column-start: 1;
   padding-left: 47px;
-  background-color: black;
+  background-color:#23bbcc ;
 }
 
 .row-three-column-two {
@@ -108,11 +108,11 @@ img {
 }
 
 .contact-info-heading {
-    color: white;
+  color: white;
 }
 
 .contact-color-change {
-    color: white;
+  color: white;
 }
 
 .under-contact {
