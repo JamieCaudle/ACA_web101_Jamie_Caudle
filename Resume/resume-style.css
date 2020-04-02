@@ -21,7 +21,8 @@ body {
   grid-row-start: 2;
   grid-column-start: 1;
   text-align: center;
-  margin-top: 70px;
+  margin-top: -9px;
+  padding-top: 79px;
   background-color: #23bbcc;
 }
 
@@ -44,7 +45,7 @@ body {
   grid-row-start: 4;
   grid-column-start: 1;
   padding-left: 47px;
-  background-color:#23bbcc ;
+  background-color: #23bbcc;
 }
 
 .row-three-column-two {
@@ -65,12 +66,8 @@ body {
 }
 
 .linkedin-logo {
-  padding-left: 99px;
+  padding-left: 53px;
   padding-top: 80px;
-}
-
-.under-linkedin-logo {
-  padding-left: 45px;
 }
 
 .name {
@@ -126,4 +123,8 @@ img {
 
 .expert {
   padding-right: 27px;
+}
+
+.address {
+  margin-bottom: 5px;
 }
