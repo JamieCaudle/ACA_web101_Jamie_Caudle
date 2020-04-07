@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.picture-container {
+  margin: auto;
+  margin-left: 7%;
+}
+
+.text-container {
+  margin: auto;
+  margin-left: 5%;
+  text-align: center;
+}
+.text-box {
+    width: 550px;
+}
+img {
+  height: 650px;
+  width: auto;
+  order: -1;
+}
