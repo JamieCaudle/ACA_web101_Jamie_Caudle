@@ -7,9 +7,11 @@ body {
 
 nav {
   display: flex;
-  height: 30px;
+  height: 58px;
+  margin: auto;
   justify-content: center;
   background-color: black;
+
 }
 
 ul {
@@ -32,6 +34,8 @@ li {
 a {
   text-decoration: none;
   color: white;
+  padding-top: 5px;
+  
 }
 
 .main-container {
@@ -58,7 +62,29 @@ img {
   width: auto;
 }
 
+/* //hamburger display none */
+
 @media (max-width: 625px) {
+ 
+
+/* // hamburger display: flex;
+
+add java onclick to button aka hamburger 
+
+on click should add a .mobile-nav  */
+
+nav.mobile-nav {
+  display: flex;
+}
+
+nav.mobile-nav a {
+display: block;
+}
+
+ nav {
+   display: none;
+ }
+ 
   li a {
     display: block;
     width: 60px;
