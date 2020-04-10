@@ -3,11 +3,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./contact-styles.css" />
-    <title>Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".toggle").on("click", function () {
+          if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+          } else {
+            $(".item").addClass("active");
+          }
+        });
+      });
+    </script>
+
+    <title>Contact Me</title>
   </head>
 
   <body>
-    <h1>Drop me a line...</h1>
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="#">MyLogo</a></li>
+        <li class="item">
+          <a href="#">Portfolio</a>
+        </li>
+        <li class="item">
+          <a href="#">Resume</a>
+        </li>
+        <li class="item">
+          <a href="#">About</a>
+        </li>
+        <li class="item">
+          <a href="#">Blog</a>
+        </li>
+        <li class="item">
+          <a href="#">Contact</a>
+        </li>
+        <li class="toggle"><span class="bars"></span></li>
+      </ul>
+    </nav>
 
     <form action="results.html" method="GET" enctype="multipart/form-data">
       <div>
@@ -23,46 +56,49 @@
         <input type="date" name="date" id="date" min="1925-01-01" />
       </div>
 
-      <div>
-        <label for="Message">Message</label> <br />
-
-        <textarea
-          id="Message"
-          name="Message"
-          rows="5" cols="33"
-          minlength="20"
-          maxlength="500"
-        ></textarea>
-      </div>
-
-      <input type="hidden" name="hidden" value="hi" />
-      <button type="submit">Submit</button>
-
-      <h3>How did you hear about me?</h3>
-      <div class="questions">
+      <div class="message-question">
         <div>
-          <label for="Classmate">Classmate</label>
-          <input type="checkbox" name="Classmate" id="Classmate" />
+          <label for="Message">Drop me a line...</label> <br />
+          <textarea
+            placeholder="Type Message Here"
+            id="Message"
+            name="Message"
+            rows="5"
+            cols="33"
+            minlength="20"
+            maxlength="500"
+          ></textarea>
         </div>
-        <div>
-          <label for="Resume Submission">Resume Submission</label>
-          <input
-            type="checkbox"
-            name="Resume Submission"
-            id="Resume Submission"
-          />
-        </div>
-        <div>
-          <label for="LinkedIn">LinkedIn</label>
-          <input type="checkbox" name="LinkedIn" id="LinkedIn" />
-        </div>
-        <div>
-          <label for="Coding Academy Rec">Coding Academy Rec</label>
-          <input
-            type="checkbox"
-            name="Coding Academy Rec"
-            id="Coding Academy Rec"
-          />
+
+        <input type="hidden" name="hidden" value="hi" />
+        <button type="submit">Submit</button>
+
+        <h3>How did you hear about me?</h3>
+        <div class="questions">
+          <div>
+            <label for="Classmate">Classmate</label>
+            <input type="checkbox" name="Classmate" id="Classmate" />
+          </div>
+          <div>
+            <label for="Resume Submission">Resume Submission</label>
+            <input
+              type="checkbox"
+              name="Resume Submission"
+              id="Resume Submission"
+            />
+          </div>
+          <div>
+            <label for="LinkedIn">LinkedIn</label>
+            <input type="checkbox" name="LinkedIn" id="LinkedIn" />
+          </div>
+          <div>
+            <label for="Coding Academy Rec">Coding Academy Rec</label>
+            <input
+              type="checkbox"
+              name="Coding Academy Rec"
+              id="Coding Academy Rec"
+            />
+          </div>
         </div>
       </div>
     </form>
