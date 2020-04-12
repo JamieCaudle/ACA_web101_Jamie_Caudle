@@ -35,7 +35,7 @@
         <li class="item">
           <a href="#">Blog</a>
         </li>
-        <li class="item">
+        <li class="item contact-item">
           <a href="#">Contact</a>
         </li>
         <li class="toggle"><span class="bars"></span></li>
@@ -51,14 +51,11 @@
         <label for="email">Email</label> <br />
         <input type="email" name="email" id="email" />
       </div>
-      <div>
-        <label for="date">Birthdate</label> <br />
-        <input type="date" name="date" id="date" min="1925-01-01" />
-      </div>
 
-      <div class="message-question">
-        <div>
-          <label for="Message">Drop me a line...</label> <br />
+      <div class="container">
+        <div class="message-question">
+          <h3 class="message-text">Drop me a line...</h3>
+          <label for="Message"></label> <br />
           <textarea
             placeholder="Type Message Here"
             id="Message"
@@ -68,20 +65,29 @@
             minlength="20"
             maxlength="500"
           ></textarea>
+
+          <br />
+
+          <input type="hidden" name="hidden" value="hi" />
+          <button class="submit-button" type="submit">Submit</button>
         </div>
+        <div class="multi-choice-question">
+          <h3 class="question-text">How did you hear about me?</h3>
 
-        <input type="hidden" name="hidden" value="hi" />
-        <button type="submit">Submit</button>
-
-        <h3>How did you hear about me?</h3>
-        <div class="questions">
-          <div>
-            <label for="Classmate">Classmate</label>
-            <input type="checkbox" name="Classmate" id="Classmate" />
+          <div class="classmate">
+            <label for="Classmate"> Classmate</label>
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="Classmate"
+              id="Classmate"
+            />
           </div>
+
           <div>
             <label for="Resume Submission">Resume Submission</label>
             <input
+              class="checkbox"
               type="checkbox"
               name="Resume Submission"
               id="Resume Submission"
@@ -89,17 +95,26 @@
           </div>
           <div>
             <label for="LinkedIn">LinkedIn</label>
-            <input type="checkbox" name="LinkedIn" id="LinkedIn" />
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="LinkedIn"
+              id="LinkedIn"
+            />
           </div>
           <div>
             <label for="Coding Academy Rec">Coding Academy Rec</label>
             <input
+              class="checkbox"
               type="checkbox"
               name="Coding Academy Rec"
               id="Coding Academy Rec"
             />
           </div>
         </div>
+
+        <!-- For Mobile we want vertical 
+     For Desktop we want horizontal -->
       </div>
     </form>
   </body>
