@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   height: 100%;
@@ -6,36 +7,37 @@ body {
 }
 
 nav {
-  display: flex;
-  height: 58px;
-  margin: auto;
-  justify-content: center;
-  background-color: black;
-
+  background-color: transparent;
+  padding: 5px 20px;
 }
 
 ul {
   display: flex;
   text-decoration: none;
-  width: 100vh;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 li {
   list-style-type: none;
   color: white;
-  margin: 0 2vw;
-  font-size: 2vh;
-  padding: 1vw;
+   margin: 0 5%;
+  font-size: 16px;
 }
 
 a {
   text-decoration: none;
   color: white;
   padding-top: 5px;
-  
+  display: block;
+}
+
+.logo {
+  font-size: 20px;
+  padding-top: 0;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .main-container {
@@ -43,7 +45,7 @@ a {
 }
 
 .picture-container {
-  display: inline-block;
+  
   margin-top: 3%;
   margin-left: 7%;
 }
@@ -62,32 +64,73 @@ img {
   width: auto;
 }
 
-/* //hamburger display none */
-
-@media (max-width: 625px) {
+@media (max-width: 767px) {
  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-/* // hamburger display: flex;
 
-add java onclick to button aka hamburger 
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-on click should add a .mobile-nav  */
 
-nav.mobile-nav {
-  display: flex;
-}
+  
+  .item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+  }
 
-nav.mobile-nav a {
-display: block;
-}
-
- nav {
-   display: none;
- }
- 
-  li a {
+  .menu li {
+    padding: 15px 5px;
+  
+  }
+  
+  .contact-item {
+    border-bottom: 1px solid white;
+  }
+  
+  .item.active {
     display: block;
-    width: 60px;
+  }
+  
+  .toggle {
+    cursor: pointer;
+  
+  }
+  
+  .bars {
+    background: white;
+    display: inline-block;
+    position: relative;
+    height: 3px;
+    width: 30px;
+  }
+  
+  .bars::before,
+  .bars::after {
+    background: white;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+  }
+  
+  .bars::before {
+    top: 10px;
+  }
+  
+  .bars::after {
+    top: -10px;
   }
 
   .main-container {
@@ -99,7 +142,7 @@ display: block;
   .picture-container {
     display: flex;
     justify-content: center;
-    margin: 0;
+
   }
 
   .text-container {

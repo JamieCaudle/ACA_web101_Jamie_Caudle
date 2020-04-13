@@ -3,33 +3,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./about-styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".toggle").on("click", function () {
+          if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+          } else {
+            $(".item").addClass("active");
+          }
+        });
+      });
+    </script>
     <title>About</title>
   </head>
 
   <body>
 
-    <div class="wrapper">
-    <nav class="flex-nav">
-        <ul>
-            <li>
-                <a href="./index.html">Portfolio</a>
-            </li>
-            <li>
-                <a href="./Resume/resume.html">Resume</a>
-            </li>
-            <li>
-                <a href="./about/about.html">About</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <li>
-                <a href="./Contact/contact.html">Contact</a>
-            </li>
-        </ul>
-</nav>
-
-</div>
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="#">MyLogo</a></li>
+        <li class="item">
+          <a href="/index.html">Portfolio</a>
+        </li>
+        <li class="item">
+          <a href="/Resume/resume.html">Resume</a>
+        </li>
+        <li class="item">
+          <a href="./About/about.html">About</a>
+        </li>
+        <li class="item">
+          <a href="#">Blog</a>
+        </li>
+        <li class="item contact-item">
+          <a href="/Contact/contact.html">Contact</a>
+        </li>
+        <li class="toggle"><span class="bars"></span></li>
+      </ul>
+    </nav>
 
 <main class="main-container">
     <div class="picture-container">
