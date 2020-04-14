@@ -1,19 +1,17 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  
 }
 
-body{
+body {
   background-color: black;
 }
 
-.container {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 
 .column {
   flex: 49%;
@@ -21,13 +19,46 @@ body{
   padding: 0 7px;
 }
 
-
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
 }
 
+.img-box {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 8px;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 98%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 45%;
+  text-align: center;
+}
+
+.img-box:hover .overlay {
+  opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .column {
+    flex: 25%;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .column {
