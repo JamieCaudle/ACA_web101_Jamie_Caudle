@@ -7,13 +7,14 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="resume-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="resume-style.css"/>
     <title>Online Resume</title>
   </head>
 
   <body>
     <section class="row-one-column-one">
-      <img src="./Boy.jpg" alt="Picture of Boy" />
+      <img id="profilePic" src="./Boy.jpg" alt="Picture of Boy" onclick="hidePic()"/>
       <h1 class="title">
         <span>Software</span> <br />
         <span class="expert">Expert</span>
@@ -30,7 +31,8 @@
         <span style="color: white;">
           <i class="fa fa-2x fa-phone logo-number" aria-hidden="true"></i>
         </span>
-        <p class="contact-color-change">125-456-7899</p>
+        <p 
+        onclick="showNumber()" id="number" class="contact-color-change">125-456-7899</p>
       </section>
 
       <section>
@@ -61,7 +63,7 @@
 
 
     <section class="row-one-column-two">
-      <h1 class="name">
+      <h1 onclick="fadeIn()" class="name" id="name">
         <span>Max</span> <br />
         Maxwell
       </h1>
@@ -149,5 +151,6 @@
         </li>
       </ul>
     </main>
+    <script src="./resume-interactive.js"></script>
   </body>
 </html>

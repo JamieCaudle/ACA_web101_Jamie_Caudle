@@ -102,6 +102,7 @@ h1 {
 img {
   height: 170px;
   width: auto;
+  cursor: pointer;
 }
 
 .contact-info-heading {
@@ -127,4 +128,13 @@ img {
 
 .address {
   margin-bottom: 5px;
+}
+
+#number {
+  cursor: pointer;
+  color: #23bbcc;
+}
+
+#name {
+  cursor: pointer;
 }
