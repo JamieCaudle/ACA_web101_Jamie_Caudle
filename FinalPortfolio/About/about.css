@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+}
+
+.nav-item {
+  padding: 0 20px;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  height: 650px;
+  width: auto;
+  border-radius: 1rem;
+}
+
+#textContainer {
+  width: 400px;
+  word-wrap: normal;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 992px) {
+  .testing {
+    display: flex;
+  }
+
+  img {
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  #textContainer {
+    justify-content: center;
+    align-items: center;
+  }
+}
