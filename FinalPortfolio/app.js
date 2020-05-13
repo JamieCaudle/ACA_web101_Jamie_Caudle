@@ -1,18 +1,15 @@
-// let x = window.matchMedia('(min-width: 992px)');
-//   if (x.matches) {
-//     document.body.style.backgroundColor = "yellow";
-//   } 
-//   else {
-//     document.body.style.backgroundColor = "pink";
-//   }
+let textAnimation = document.getElementById("textContainer");
 
-    
-// const removeAnimation = () => {
-//    let animation = document.getElementById('textContainer');
-//    animation.classList.remove('animate__lightSpeedInLeft')
-// }
+const removeAnimation = () => {
+  textAnimation.classList.remove("animate__lightSpeedInLeft");
+};
 
-// const addAnimation = () => {
-//   let addAnimation = document.getElementById('textContainer');
-//   addAnimation.classList.add("animate__slideInUp");
-// }
+const addAnimation = () => {
+  textAnimation.classList.add("animate__slideInUp");
+};
+
+let screenWidth = window.innerWidth;
+if (screenWidth <= 600) {
+  removeAnimation();
+  addAnimation();
+}
