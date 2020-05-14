@@ -1,11 +1,6 @@
 body {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 300;
   height: 100vh;
-}
-
-.nav-item {
-  padding: 0 20px;
+  
 }
 
 main {
@@ -21,19 +16,59 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
   z-index: -1;
 }
 
-.logo {
-  background-color: black;
-  display: flex;
+
+.design {
+  display:inline;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-size: 600px;
-  font-weight: lighter;
+  overflow:hidden;
+  white-space:nowrap;
+  text-align:center;
+  font-size:45px;
   color: white;
-  z-index: 1;
-  position: relative;
+  margin-top:-150px;
+  font-weight: 100;
 }
+
+.design:first-of-type {
+animation: showup 7s;
+animation-fill-mode: forwards;
+}
+
+.design:last-of-type {
+width:0px;
+animation: reveal 7s;
+animation-fill-mode: forwards;
+}
+ 
+.design:last-of-type span {
+margin-left:-355px;
+animation: slidein 7s;
+animation-fill-mode: forwards;
+} 
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:1;width:355px;}
+}
+
