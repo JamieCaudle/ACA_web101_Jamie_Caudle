@@ -54,6 +54,10 @@ body {
   text-align: center;
 }
 
+.download-btn {
+  margin: 15px auto;
+}
+
 nav {
   grid-area: nav;
 }
@@ -163,5 +167,9 @@ nav {
 
   .education {
     margin-bottom: 10px;
+  }
+
+  .download-btn {
+    ;
   }
 }
