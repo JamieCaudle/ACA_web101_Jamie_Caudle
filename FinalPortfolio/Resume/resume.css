@@ -1,19 +1,167 @@
+body {
+  background-image: url(../Media/foggy-1149180_1920.jpg);
+}
+
+.wrapper {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "nav nav"
+    "header header"
+    "sectionOne sectionTwo"
+    "footer footer";
+}
 
 .header {
-  background-color: black;
   display: flex;
-  justify-content: center;
-  text-align: center;
-  height: 150px;
-  color: white;
+  grid-area: header;
 }
 
 .headerTxt {
-  margin-top: 32px;
-  font-weight: bold;
+  justify-content: center;
+  margin: 55px auto;
+  font-weight: 300;
   font-size: 45px;
+  color: white;
+  text-align: center;
+}
+
+.education,
+.experience {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  align-items: center;
+  height: 440px;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  width: 400px;
+  margin: auto;
 }
 
 .education {
-  background-color: turquoise;
+  grid-area: sectionOne;
+}
+
+.experience {
+  grid-area: sectionTwo;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.main-heading,
+.heading,
+.item {
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-shadow: 1px 1px 2px black;
+}
+
+.main-heading {
+  border-bottom: 1px solid white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.item {
+  font-size: 20px;
+}
+
+.heading {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.download-btn {
+  margin-top: 25px;
+  height: 50px;
+  width: 210px;
+  color: black;
+  font-size: 17px;
+  padding: 0 20px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  background: white;
+}
+
+.download-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.loading::before {
+  content: "";
+  z-index: 1;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 22%;
+  left: 33.3%;
+  width: 33.3%;
+  height: 1px;
+  background: #fff;
+  z-index: 2;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 2s infinite alternate;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0) scaleX(0);
+    transform-origin: left;
+    left: 33.3%;
+    right: auto;
+  }
+
+  45% {
+    transform: translateX(0) scaleX(1);
+    transform-origin: left;
+    left: 33.3%;
+    right: auto;
+  }
+
+  50% {
+    transform: translateX(0) scaleX(1);
+    transform-origin: right;
+    left: auto;
+    right: 33.3%;
+  }
+
+  100% {
+    transform: translateX(0) scaleX(0);
+    transform-origin: right;
+    left: auto;
+    right: 33.3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-areas:
+      "nav"
+      "header"
+      "sectionOne"
+      "sectionTwo"
+      "footer";
+  }
+
+  .education {
+    margin-bottom: 10px;
+  }
 }
